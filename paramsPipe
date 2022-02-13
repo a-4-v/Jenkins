@@ -1,8 +1,8 @@
 pipeline{
   agent any
   parameters{
-    string(name:'IP', defaultValue:'127.0.0.1', description:'IP to ping'),
-    string(name:'port', defaultValue:'80', description:'Port to ping'),
+    string(name:'IP', defaultValue:'127.0.0.1', description:'IP to ping')
+    string(name:'port', defaultValue:'80', description:'Port to ping')
   }
   stages{
     stage("Build"){
