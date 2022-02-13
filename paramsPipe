@@ -2,11 +2,17 @@ pipeline{
   agent any
   parameters{
     string(name:'IP', defaultValue:'127.0.0.1', description:'IP to ping')
+    string(name:'Port', defaultValue:'80', description:'Port to ping')
   }
   stages{
     stage("Build"){
       steps{
         echo "Hello ${params.IP}!"
+      }
+    }
+    stage("Build more"){
+      steps{
+        echo "Hello ${params.Port}!"
       }
     }
   }
