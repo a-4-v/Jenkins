@@ -1,0 +1,11 @@
+Pipeline{
+  agent any
+  parameters{
+    string(name:'IP', defaultValue:'127.0.0.1', description:'IP to ping')
+  }
+  stages{
+    stage("Build"){
+      echo "Hello ${params.IP}!"
+    }
+  }
+}
